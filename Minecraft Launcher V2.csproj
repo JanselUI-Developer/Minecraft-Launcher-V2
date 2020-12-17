@@ -36,8 +36,8 @@
     <Reference Include="CmlLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\CustomMinecraftLauncher.1.1.1\lib\net45\CmlLib.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetZip, Version=1.13.4.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
-      <HintPath>packages\DotNetZip.1.13.4\lib\net40\DotNetZip.dll</HintPath>
+    <Reference Include="DotNetZip, Version=1.15.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetZip.1.15.0\lib\net40\DotNetZip.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.1.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.1.2\lib\net40\Guna.UI2.dll</HintPath>

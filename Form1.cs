@@ -89,5 +89,22 @@ namespace Minecraft_Launcher_V2
             }).Start();
         }
 
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            Path.Text = Environment.GetEnvironmentVariable("appdata") + "\\.minecraft";
+            new Thread((ThreadStart)delegate
+            {
+                Minecraft.Initialize(Path.Text);
+                versions = MProfileInfo.GetProfiles();
+                Invoke((MethodInvoker)delegate
+                {
+                    MProfileInfo[] array = versions;
+                    foreach (MProfileInfo mProfileInfo in array)
+                    {
+                        Cb_Version.Items.Add(mProfileInfo.Name);
+                    }
+                });
+            }).Start();
+        }
     }
 }

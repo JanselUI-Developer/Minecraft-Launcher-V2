@@ -43,7 +43,9 @@ namespace Minecraft_Launcher_V2
             this.Test = new Guna.UI2.WinForms.Guna2Button();
             this.Beenden = new Guna.UI2.WinForms.Guna2Button();
             this.HomeGB = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Launch = new Guna.UI2.WinForms.Guna2Button();
+            this.Cb_Version = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Path = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.GrBx1.SuspendLayout();
             this.HomeGB.SuspendLayout();
@@ -236,7 +238,9 @@ namespace Minecraft_Launcher_V2
             // HomeGB
             // 
             this.HomeGB.BorderColor = System.Drawing.Color.Transparent;
-            this.HomeGB.Controls.Add(this.guna2ComboBox1);
+            this.HomeGB.Controls.Add(this.Path);
+            this.HomeGB.Controls.Add(this.Launch);
+            this.HomeGB.Controls.Add(this.Cb_Version);
             this.HomeGB.CustomBorderColor = System.Drawing.Color.Transparent;
             this.HomeGB.FillColor = System.Drawing.Color.Transparent;
             this.HomeGB.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -248,28 +252,54 @@ namespace Minecraft_Launcher_V2
             this.HomeGB.TabIndex = 4;
             this.HomeGB.Text = " ";
             // 
-            // guna2ComboBox1
+            // Launch
             // 
-            this.guna2ComboBox1.AutoRoundedCorners = true;
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.guna2ComboBox1.BorderRadius = 17;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(10, 4);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(261, 36);
-            this.guna2ComboBox1.TabIndex = 0;
+            this.Launch.AutoRoundedCorners = true;
+            this.Launch.BorderRadius = 14;
+            this.Launch.CheckedState.Parent = this.Launch;
+            this.Launch.CustomImages.Parent = this.Launch;
+            this.Launch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.Launch.ForeColor = System.Drawing.Color.White;
+            this.Launch.HoverState.Parent = this.Launch;
+            this.Launch.Location = new System.Drawing.Point(10, 47);
+            this.Launch.Name = "Launch";
+            this.Launch.ShadowDecoration.Parent = this.Launch;
+            this.Launch.Size = new System.Drawing.Size(260, 30);
+            this.Launch.TabIndex = 1;
+            this.Launch.Text = "Launch";
+            // 
+            // Cb_Version
+            // 
+            this.Cb_Version.AutoRoundedCorners = true;
+            this.Cb_Version.BackColor = System.Drawing.Color.Transparent;
+            this.Cb_Version.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.Cb_Version.BorderRadius = 17;
+            this.Cb_Version.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Cb_Version.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cb_Version.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.Cb_Version.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Cb_Version.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Cb_Version.FocusedState.Parent = this.Cb_Version;
+            this.Cb_Version.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Cb_Version.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.Cb_Version.HoverState.Parent = this.Cb_Version;
+            this.Cb_Version.ItemHeight = 30;
+            this.Cb_Version.ItemsAppearance.Parent = this.Cb_Version;
+            this.Cb_Version.Location = new System.Drawing.Point(10, 4);
+            this.Cb_Version.Name = "Cb_Version";
+            this.Cb_Version.ShadowDecoration.Parent = this.Cb_Version;
+            this.Cb_Version.Size = new System.Drawing.Size(261, 36);
+            this.Cb_Version.TabIndex = 0;
+            // 
+            // Path
+            // 
+            this.Path.AutoSize = true;
+            this.Path.Location = new System.Drawing.Point(10, 400);
+            this.Path.Name = "Path";
+            this.Path.Size = new System.Drawing.Size(38, 15);
+            this.Path.TabIndex = 2;
+            this.Path.Text = "label3";
+            this.Path.Visible = false;
             // 
             // Form1
             // 
@@ -286,10 +316,12 @@ namespace Minecraft_Launcher_V2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Shown += new System.EventHandler(this.Form1_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.GrBx1.ResumeLayout(false);
             this.GrBx1.PerformLayout();
             this.HomeGB.ResumeLayout(false);
+            this.HomeGB.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -309,7 +341,9 @@ namespace Minecraft_Launcher_V2
         private Guna.UI2.WinForms.Guna2TextBox password;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2GroupBox HomeGB;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox Cb_Version;
+        private Guna.UI2.WinForms.Guna2Button Launch;
+        private System.Windows.Forms.Label Path;
     }
 }
 
