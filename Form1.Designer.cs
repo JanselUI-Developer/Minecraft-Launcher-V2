@@ -46,6 +46,10 @@ namespace Minecraft_Launcher_V2
             this.Launch = new Guna.UI2.WinForms.Guna2Button();
             this.Cb_Version = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Path = new System.Windows.Forms.Label();
+            this.Txt_Java = new System.Windows.Forms.Label();
+            this.launchbar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.launchbar2 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.Lv_Status = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.GrBx1.SuspendLayout();
             this.HomeGB.SuspendLayout();
@@ -238,6 +242,10 @@ namespace Minecraft_Launcher_V2
             // HomeGB
             // 
             this.HomeGB.BorderColor = System.Drawing.Color.Transparent;
+            this.HomeGB.Controls.Add(this.Lv_Status);
+            this.HomeGB.Controls.Add(this.launchbar2);
+            this.HomeGB.Controls.Add(this.launchbar1);
+            this.HomeGB.Controls.Add(this.Txt_Java);
             this.HomeGB.Controls.Add(this.Path);
             this.HomeGB.Controls.Add(this.Launch);
             this.HomeGB.Controls.Add(this.Cb_Version);
@@ -267,6 +275,7 @@ namespace Minecraft_Launcher_V2
             this.Launch.Size = new System.Drawing.Size(260, 30);
             this.Launch.TabIndex = 1;
             this.Launch.Text = "Launch";
+            this.Launch.Click += new System.EventHandler(this.Launch_Click);
             // 
             // Cb_Version
             // 
@@ -301,6 +310,46 @@ namespace Minecraft_Launcher_V2
             this.Path.Text = "label3";
             this.Path.Visible = false;
             // 
+            // Txt_Java
+            // 
+            this.Txt_Java.AutoSize = true;
+            this.Txt_Java.Location = new System.Drawing.Point(13, 384);
+            this.Txt_Java.Name = "Txt_Java";
+            this.Txt_Java.Size = new System.Drawing.Size(38, 15);
+            this.Txt_Java.TabIndex = 3;
+            this.Txt_Java.Text = "label3";
+            this.Txt_Java.Visible = false;
+            // 
+            // launchbar1
+            // 
+            this.launchbar1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.launchbar1.Location = new System.Drawing.Point(16, 351);
+            this.launchbar1.Name = "launchbar1";
+            this.launchbar1.ShadowDecoration.Parent = this.launchbar1;
+            this.launchbar1.Size = new System.Drawing.Size(278, 30);
+            this.launchbar1.TabIndex = 4;
+            this.launchbar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            // 
+            // launchbar2
+            // 
+            this.launchbar2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.launchbar2.Location = new System.Drawing.Point(300, 351);
+            this.launchbar2.Name = "launchbar2";
+            this.launchbar2.ShadowDecoration.Parent = this.launchbar2;
+            this.launchbar2.Size = new System.Drawing.Size(278, 30);
+            this.launchbar2.TabIndex = 5;
+            this.launchbar2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            // 
+            // Lv_Status
+            // 
+            this.Lv_Status.AutoSize = true;
+            this.Lv_Status.Location = new System.Drawing.Point(76, 388);
+            this.Lv_Status.Name = "Lv_Status";
+            this.Lv_Status.Size = new System.Drawing.Size(38, 15);
+            this.Lv_Status.TabIndex = 6;
+            this.Lv_Status.Text = "label3";
+            this.Lv_Status.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,6 +365,7 @@ namespace Minecraft_Launcher_V2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.GrBx1.ResumeLayout(false);
@@ -344,6 +394,10 @@ namespace Minecraft_Launcher_V2
         private Guna.UI2.WinForms.Guna2ComboBox Cb_Version;
         private Guna.UI2.WinForms.Guna2Button Launch;
         private System.Windows.Forms.Label Path;
+        private System.Windows.Forms.Label Txt_Java;
+        private Guna.UI2.WinForms.Guna2ProgressBar launchbar2;
+        private Guna.UI2.WinForms.Guna2ProgressBar launchbar1;
+        private System.Windows.Forms.Label Lv_Status;
     }
 }
 
