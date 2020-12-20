@@ -12,6 +12,7 @@ using CmlLib.Launcher;
 using System.Threading;
 using System.Diagnostics;
 using System.IO;
+using System.Net;
 
 namespace Minecraft_Launcher_V2
 {
@@ -25,6 +26,27 @@ namespace Minecraft_Launcher_V2
         {
             InitializeComponent();
             HomeGB.Hide();
+            if (Directory.Exists("B:\\LT\\")) //Color Theme for special software
+            {
+                this.BackColor = Color.Black;
+                this.guna2PictureBox1.BackColor = System.Drawing.Color.Black;
+                this.guna2PictureBox1.FillColor = System.Drawing.Color.Orange;
+                this.guna2Button1.BackColor = System.Drawing.Color.Black;
+                this.guna2Button1.FillColor = System.Drawing.Color.Orange;
+                this.Test.FillColor = System.Drawing.Color.Orange;
+                this.Beenden.BackColor = System.Drawing.Color.Orange;
+                this.Cb_Version.BorderColor = System.Drawing.Color.Black;
+                this.Cb_Version.FillColor = System.Drawing.Color.Orange;
+                this.Launch.FillColor = Color.Orange;
+                this.Home.FillColor = Color.Orange;
+                this.Home.BackColor = Color.Orange;
+            }
+            if (!File.Exists(Minecraft.DefaultPath + "\\launcher_profiles.json")) // hopefully a fix for Forge, Fabric and Optifine
+            {
+                WebClient LT = new WebClient();
+                string pathfile = Minecraft.DefaultPath + "\\launcher_profiles.json";
+                LT.DownloadFile("https://onedrive.live.com/download?cid=5949261A3E41CD1B&resid=5949261A3E41CD1B%214068&authkey=AH68A5ix3xn2xa8", pathfile);
+            }
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
